@@ -10,8 +10,17 @@ public class Calculator {
      * @return - sum of firstNumber + secondNumber
      */
     public Integer getSum(List<Integer> firstNumber, List<Integer> secondNumber) {
-        //Task implementation
-        return 1;
+        return getReversedNumberFromList(firstNumber) + getReversedNumberFromList(secondNumber);
+    }
+
+    private Integer getReversedNumberFromList(List<Integer> number) {
+        int num = 0;
+
+        for(int i = 0; i < number.size(); i++) {
+            num += Math.pow(10, i) * number.get(i);
+        }
+
+        return num;
     }
 
     /**
