@@ -1,7 +1,8 @@
 package ru.dataart.academy.java;
 
 import java.util.ArrayList;
-import java.util.Collections;
+
+import java.util.LinkedList;
 import java.util.List;
 
 public class Calculator {
@@ -57,7 +58,17 @@ public class Calculator {
      * [1, 2, 3 , 4] -> [1, 4]
      */
     public <T> List<T> getBounds(List<T> list) {
-        // Task implementation
-        return Collections.EMPTY_LIST;
+        LinkedList<T> listOfBounds = new LinkedList<>();
+
+        if(list.isEmpty()) {
+            return listOfBounds;
+        }
+
+        listOfBounds.add(list.get(0));
+
+        if(list.size() > 1) {
+            listOfBounds.add(list.get(list.size() - 1));
+        }
+        return listOfBounds;
     }
 }
