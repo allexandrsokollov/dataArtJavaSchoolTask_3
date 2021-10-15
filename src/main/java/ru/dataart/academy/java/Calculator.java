@@ -1,5 +1,6 @@
 package ru.dataart.academy.java;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -32,7 +33,19 @@ public class Calculator {
      */
     public <T> List<T> getOddElements(List<T> list) {
 
-        return Collections.EMPTY_LIST;
+        List<T> oddList = new ArrayList<>();
+
+        for(int i = 0; i < list.size(); i++) {
+            if(isIntOdd(i + 1)) {
+                oddList.add(list.get(i));
+            }
+        }
+
+        return oddList;
+    }
+
+    private boolean isIntOdd(int num) {
+        return num % 2 != 0;
     }
 
     /**
