@@ -11,7 +11,7 @@ public class Calculator {
      */
     public Integer getSum(List<Integer> firstNumber, List<Integer> secondNumber) {
         //Task implementation
-        return 0;
+        return 1;
     }
 
     /**
@@ -22,7 +22,7 @@ public class Calculator {
      * Example: [1, 22, 34] -> [1, 34]
      */
     public <T> List<T> getOddElements(List<T> list) {
-        // Task implementation
+
         return Collections.EMPTY_LIST;
     }
 
